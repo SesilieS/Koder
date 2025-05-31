@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="produce.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Frank Ruhl Libre' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="produce.js" defer></script>
+    <title>FRAM/product</title>
+    <style>
+        body {
+          font-family: "Frank Ruhl Libre", sans-serif;
+          font-family: "Arimo", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head-line">
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="nav-container">
+                <button class="close-btn" aria-label="Lukk meny">×</button>
+                <nav aria-label="Main navigation">
+                  <ul>
+                    <li><a href="produce.html">Products</a></li>
+                    <li><a href="chatbot.html">Chat</a></li>
+                    <li class="Checkout"><a href="#Checkout">Checkout</a></li>
+                  </ul>
+                </nav>
+              </div>
+            <h1 class="Head-home"><a href="index.html">FRAM</a></h1>
+            <div class="cart-counter" id="cart-count">0</div>
+        </div>
+    </header>   
+    <main>
+        <article class="Produce">
+            <h2>Produce</h2>
+            <p>Explore our selection of seasonal produce, sourced directly from<br> local farms to ensure peak freshness and quality. Every item is<br> chosen with care, supporting sustainable practices and bringing<br> the best of the harvest to your table</p>
+            <div class="Produce-items">
+                <div class="item">
+                    <div class="image-wrapper">
+                      <img src="oat.jpg" alt="Oats">
+                      <button class="add-to-basket">Add to basket ↑</button>
+                    </div>
+                    <div class="text-top">
+                      <p>Oats</p>
+                      <p>16 kr/kg</p>
+                    </div>
+                    <p class="text-bottom">1kg</p>
+                  </div>
+                  
+          
+              <div class="item">
+                <div class="image-wrapper">
+                <img src="redonion.jpg" alt="Red onions">
+                <button class="add-to-basket">Add to basket ↑</button>
+                </div>
+                <div class="text-top">
+                  <p>Red onions</p>
+                  <p>45 kr/kg</p>
+                </div>
+                <p class="text-bottom">0,5kg</p>
+              </div>
+          
+              <div class="item">
+                <div class="image-wrapper">
+                <img src="garlic.jpg" alt="Garlic">
+                <button class="add-to-basket">Add to basket ↑</button>
+                </div>
+                <div class="text-top">
+                  <p>Garlic</p>
+                  <p>38 kr/kg</p>
+                </div>
+                <p class="text-bottom">0,2kg</p>
+              </div>
+
+              <div class="item">
+                <div class="image-wrapper">
+                <img src="potatos.jpg" alt="Potatos">
+                <button class="add-to-basket">Add to basket ↑</button>
+                </div>
+                <div class="text-top">
+                  <p>Potatos</p>
+                  <p>32 kr/kg</p>
+                </div>
+                <p class="text-bottom">1kg</p>
+              </div>
+
+              <div class="item">
+                <div class="image-wrapper">
+                <img src="carrots.jpg" alt="Carrots">
+                <button class="add-to-basket">Add to basket ↑</button>
+                </div>
+                <div class="text-top">
+                  <p>Carrots</p>
+                  <p>48 kr/kg</p>
+                </div>
+                <p class="text-bottom">1kg</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="Farms-wrapper">
+            <h3>See our partnering farms</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15814.440787371663!2d10.615217368975687!3d60.30375047499697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641a30c3be67c59%3A0x94dbad789ad47bba!2sBraastad%20Gaard!5e0!3m2!1sno!2sno!4v1748507015087!5m2!1sno!2sno"
+                  width="600"
+                  height="450"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+          </article>
+          </main>
+          <footer class="stay-updated">
+            <div class="stay-updated-inner">
+                <h5>Fram</h5>
+                <h6>Stay updated</h6>
+                <p>Sign up for our newsletter to be the first <br>to know about new produce or other <br>exciting news!</p>    
+                <form id="stay-updated" onsubmit="handleStayUpdatedSubmit(event)">
+                    <input type="text" id="contactName" name="contactName" placeholder="First name" required>
+                    <input type="email" id="contactEmail" name="contactEmail" placeholder="Email address" required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </footer>
+</body>
+</html>

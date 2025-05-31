@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+
+  .head-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #f7f2de;
+    position: relative;
+    border-bottom: 1px solid black;
+  }
+  .cart-counter {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #008F51;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    min-width: 24px;
+    text-align: center;
+    z-index: 99;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .head-line .hamburger {
+    align-self: center;
+  }
+  .hamburger:hover {
+    opacity: 40%;
+  }
+  
+  .hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Navigation Container */
+  .nav-container {
+    width: 33.333%;
+    height: 100vh;
+    background-color: #008f51;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-bottom: 1px solid black;
+    gap: 1.5rem;
+  }
+  
+  .nav-container.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    margin-bottom: 20px;
+    margin: 83px;
+    border-top: black 1px solid;
+    padding: 30px 0;
+  }
+  
+  nav li {
+    margin: 15px 0;
+    font-family: "Arimo", sans-serif;
+    font-size: 24px;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .Checkout {
+    padding-top: 50vh;
+  }
+
+  nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+  }
+  /* Hamburger Animation */
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+      
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: transform 0.3s ease;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  /* Responsiv justering */
+@media (max-width: 768px) {
+    .nav-container {
+      width: 60vw; /* tar mer bredde på mobil */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-container {
+      width: 80vw; /* nesten hele skjermen på små mobiler */
+    }
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px auto;
+    font-family: "Frank Ruhl Libre", Light;
+    font-size: 36px;
+    flex-grow: 1;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Produce items */
+  .Produce {
+    background-color: #f7f2de;
+  }
+
+  .Produce h2 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-left: 75px;;
+    font-family: "Arimo", sans-serif;
+  }
+  .Produce p {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 40px;
+    padding-left: 75px;
+
+    font-family: "Arimo", sans-serif;
+  }
+  
+.Produce-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 10px;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  /* Sort knapp nederst til høyre på bildet */
+  .add-to-basket {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+  }
+  
+  .add-to-basket:hover {
+    opacity: 1;
+  }
+
+  
+  .Produce-items > .item {
+    width: 400px;
+    text-align: left;
+  }
+  
+  .Produce-items img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .text-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .text-bottom {
+    font-size: 0.9em;
+    color: #666;
+    padding-bottom: 30px;
+  }
+
+  /*Farms & map*/
+  .Farms-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+    border-top: solid black 1px;
+    background-color: #f7f2de;
+  }
+  
+  .Farms-wrapper h3 {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Arimo", sans-serif;
+  }
+  
+  .map-container {
+    flex: 2;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Vertikal linje mellom h3 og kart */
+  .Farms-wrapper::before {
+    content: "";
+    width: 1px;
+    background: black;
+    height: 100%;
+    position: absolute;
+    left: 33.33%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  /* === Responsiv oppførsel === */
+  @media (max-width: 1000px) {
+    .Farms-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Farms-wrapper::before {
+      display: none;
+    }
+  
+    .Farms-wrapper h3,
+    .map-container {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .map-container iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+    }
+
+    .Farms-wrapper h3 .map-container {
+      width: 100%;
+      display: block;
+      margin: 20px 0;
+      padding: 0 20px;
+    }
+         
+    .h3::after {
+           display: none;
+         }
+       }
+
+.stay-updated {
+    background-color: red;
+    padding: 40px 0;
+    color: white;
+    font-family: "Arimo", sans-serif;
+  }
+  
+  /* Innholdet sentrert og med maks bredde */
+  .stay-updated-inner {
+    max-width: 500px;
+    margin-left: 75px;
+    padding-right: 25px; /* Luft på små skjermer */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
+  
+  /* Tekst */
+  .stay-updated h5 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: Frank Ruhl Libre, light;
+  }
+  .stay-updated h6 {
+    font-size:30px;
+    margin-bottom: 20px;
+    font-family: Arimo, light;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  .stay-updated p {
+    margin: 0;
+  }
+  
+  .stay-updated form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .stay-updated input[type="text"],
+  .stay-updated input[type="email"],
+  .stay-updated button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .stay-updated input:focus {
+    outline: none;
+    border: 2px solid #fff;
+  }
+  
+  .stay-updated button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .stay-updated button:hover {
+    background-color: #f0f0f0;
+  }
+  

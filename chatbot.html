@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="chatbot.css" rel="stylesheet">
+    <script src="chatbot.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Frank Ruhl Libre' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAM/chat</title>
+    <style>
+        body {
+          font-family: "Frank Ruhl Libre", sans-serif;
+          font-family: "Arimo", sans-serif;
+        }
+    </style>
+</head>
+<header>
+    <div class="head-line">
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+       <div class="nav-container">
+            <button class="close-btn" aria-label="Lukk meny">×</button>
+                    <nav aria-label="Main navigation">
+                      <ul>
+                        <li><a href="produce.html">Products</a></li>
+                        <li><a href="chatbot.html">Chat</a></li>
+                        <li class="Checkout"><a href="#Checkout">Checkout</a></li>
+                      </ul>
+                    </nav>
+        </div>
+        <h1 class="Head-home"><a href="index.html">FRAM</a></h1>
+        <div class="cart-counter" id="cart-count">0</div>
+    </header>
+</header>
+<main>
+    <section id="chatbot">
+        <form id="chatbot-form">
+            <input id="chatbot-input" type="text">
+            <button>Send</button>
+
+        </form>
+        <div id="response-div"></div>
+    </section>
+    
+
+</main>
+</html>

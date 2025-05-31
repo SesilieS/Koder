@@ -3,33 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Frank Ruhl Libre' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <title>FRAM</title>
+    <style>
+        body {
+          font-family: "Frank Ruhl Libre", sans-serif;
+          font-family: "Arimo", sans-serif;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <div class="logo-background" style="background-image: url('mainsite.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;"></div>
-            <h1 class="logo-title">FRAM</h1>
+        <div class="head-line">
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        <div class="nav-container">
+            <button class="close-btn" aria-label="Lukk meny">×</button>
+            <nav aria-label="Main navigation">
+              <ul>
+                <li><a href="produce.html">Products</a></li>
+                <li><a href="chatbot.html">Chat</a></li>
+                <li class="Checkout"><a href="#Checkout">Checkout</a></li>
+              </ul>
+            </nav>
         </div>
-        <div class="logo-text">
-            <p>Free and Open Source Framework for Web Development</p>
-        </div>
-        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-            <div class="nav-container">
-                <nav aria-label="Main navigation">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <h1>FRAM</h1>
+        <div class="cart-counter" id="cart-count">0</div>  
     </header>
+    
+    <main>
+        <article class="mainsite">
+            <h2>FRAM</h2>
+            <h3>Home delivery from <br> your local farms</h3>
+        </article>
+        <article class="shop">
+            <h2>Shop our seasonal <br>selection</h2>
+            <p>Updated every week</p>
+            <img src="basket.jpg" alt="Basket with seasonal products" class="responsive-img">
+            <p>New produce is added continuously as time <br>goes by and the seasons change.</p>
+            <a href="produce.html" class="button">Brows our selection</a>
+        </article>
+        <article class="about">
+            <h2>Ask us about <br>anything</h2>
+            <p>All your questions answered</p>
+            <img src="manpointing.jpg" alt="Person pointing at his field" class="responsive-img">
+            <p>New produce is added continuously as time <br>goes by and the seasons change.</p>
+            <a href="chatbot.html" class="button">Go to chat</a>
+        </article>
+        
+        <article class="how-it-works-wrapper">
+            <div class="how-header">
+              <h3>This is how it <br>works</h3>
+            </div>   
+            <div class="how-it-works">
+              <div class="order">
+                <h4>Order groceries</h4>
+                <p>Fram is a circular service that ensures your kitchen is always stocked with the essentials you need. Browse our seasonal selection, choose your items, and place your order online.<br> <a href="produce.html" class="in-stock">See our stock here</a> </p> 
+              </div>
+              <div class="stock-up">
+                <h4>Stock up</h4>
+                <p>Once your order arrives, unpack the produce and store it however it works best for you. Hold onto the containers—they’re yours to keep until your next order.</p>
+              </div>  
+              <div class="scan-reorder">
+                <h4>Scan and reorder</h4>
+                <p>Ready for a refill? Grab the containers from your last order and scan the QR code with our app or your phone’s camera. This instantly adds the items back to your cart, making reordering a breeze.</p>
+              </div>
+              <div class="swap-reuse">
+                <h4>Swap and reuse</h4>
+                <p>When we deliver your new order, simply leave your empty containers outside. We’ll pick them up, clean them thoroughly, and reuse them for future deliveries.</p>
+              </div>
+            </div>
+        </article>
+
+        <article class="popular">
+            <h5>Popular produce</h5>
+            <div class="popular-items">
+                <div class="item">
+                    <div class="image-wrapper">
+                      <img src="oat.jpg" alt="Oats">
+                      <button class="add-to-basket">Add to basket ↑</button>
+                    </div>
+                    <div class="text-top">
+                      <p>Oats</p>
+                      <p>48 kr/kg</p>
+                    </div>
+                    <p class="text-bottom">1kg</p>
+            </div>
+                                
+            <div class="item">
+                <div class="image-wrapper">
+                    <img src="redonion.jpg" alt="Red onions">
+                    <button class="add-to-basket">Add to basket ↑</button>
+                </div>
+                <div class="text-top">
+                    <p>Red onions</p>
+                    <p>48 kr/kg</p>
+                </div>
+                <p class="text-bottom">0,5kg</p>
+            </div>
+              
+            <div class="item">
+                <div class="image-wrapper">
+                    <img src="garlic.jpg" alt="Garlic">
+                    <button class="add-to-basket">Add to basket ↑</button>
+                </div>
+                <div class="text-top">
+                  <p>Garlic</p>
+                  <p>48 kr/kg</p>
+                </div>
+                <p class="text-bottom">0,2kg</p>
+            </div>
+        </article>
+    </main>          
+    <footer class="stay-updated">
+        <div class="stay-updated-inner">
+            <h5>Fram</h5>
+            <h6>Stay updated</h6>
+            <p>Sign up for our newsletter to be the first <br>to know about new produce or other <br>exciting news!</p>    
+            <form id="stay-updated" onsubmit="handleStayUpdatedSubmit(event)">
+                <input type="text" id="contactName" name="contactName" placeholder="First name" required>
+                <input type="email" id="contactEmail" name="contactEmail" placeholder="Email address" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </footer>            
 </body>
 </html>

@@ -22,7 +22,6 @@ function closeMenu() {
   hamburger.setAttribute('aria-expanded', 'false');
   hamburger.classList.remove('active');
 }
-
 const cartCounter = document.getElementById('cart-count');
 let count = 0;
 
