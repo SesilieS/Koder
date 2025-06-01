@@ -10,7 +10,6 @@ let messageHistory = [
   { role: "system", content: "You wil help the user to learn more about products produced in local farms. Products like vegetables. The farmers are located i Norway. If the user wants to buy vegetables, please guide them to the Products found in the Menu on the left" }
 ];
 
-// Mobile nav toggle
 hamburger.addEventListener('click', () => {
   const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
   hamburger.setAttribute('aria-expanded', !isExpanded);
@@ -35,11 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const greeting = "What can I help you with today?";
     appendMessage("ai", greeting);
   
-    // Optional: also add to message history so the assistant remembers it
     messageHistory.push({ role: "assistant", content: greeting });
   });
   
-// Message bubble appending
 function appendMessage(sender, text) {
   const message = document.createElement("div");
   message.classList.add("message", sender);
@@ -48,7 +45,6 @@ function appendMessage(sender, text) {
   chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
-// Form submission
 chatBotForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const userMessage = chatInput.value.trim();
@@ -95,7 +91,6 @@ chatBotForm.addEventListener("submit", async (event) => {
   }
 });
 
-// Submit on Enter
 chatInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();

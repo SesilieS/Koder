@@ -4,33 +4,7 @@
     box-sizing: border-box;
     
   }
-
-
-  .head-line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    background-color: #f7f2de;
-    position: relative;
-    border-bottom: 1px solid black;
-  }
-  .cart-counter {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background-color: #008F51;
-    font-weight: normal;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 999px;
-    min-width: 24px;
-    text-align: center;
-    z-index: 99;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-
+  /*Header*/
   .head-line .hamburger {
     align-self: center;
   }
@@ -46,8 +20,16 @@
     background-color: #333;
     transition: transform 0.3s ease;
   }
-  
-  /* Navigation Container */
+
+  .head-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #f7f2de;
+    position: relative;
+    border-bottom: 1px solid black;
+  }
   .nav-container {
     width: 33.333%;
     height: 100vh;
@@ -102,7 +84,7 @@
     text-transform: uppercase;
     letter-spacing: 10px;
   }
-  /* Hamburger Animation */
+
 .hamburger.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -142,19 +124,29 @@
     cursor: pointer;
     z-index: 1001;
   }
-  /* Responsiv justering */
-@media (max-width: 768px) {
+
+@media (max-width: 1200px) {
     .nav-container {
-      width: 60vw; /* tar mer bredde på mobil */
+      width: 100%; 
     }
   }
   
-  @media (max-width: 480px) {
-    .nav-container {
-      width: 80vw; /* nesten hele skjermen på små mobiler */
-    }
+  .cart-counter {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #008F51;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    min-width: 24px;
+    text-align: center;
+    z-index: 99;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
-  
+  /*Main*/
+  /*Information*/
   h1 {
     text-align: center;
     margin: 20px auto;
@@ -210,7 +202,7 @@
     object-fit: cover;
     border-radius: 15px;
   }
-  /* Sort knapp nederst til høyre på bildet */
+
   .add-to-basket {
     position: absolute;
     bottom: 20px;
@@ -281,7 +273,6 @@
     text-align: center;
   }
   
-  /* Vertikal linje mellom h3 og kart */
   .Farms-wrapper::before {
     content: "";
     width: 1px;
@@ -294,7 +285,6 @@
     z-index: 10;
   }
   
-  /* === Responsiv oppførsel === */
   @media (max-width: 1000px) {
     .Farms-wrapper {
       flex-direction: column;
@@ -329,6 +319,7 @@
          }
        }
 
+/*Footer*/
 .stay-updated {
     background-color: red;
     padding: 40px 0;
@@ -336,18 +327,16 @@
     font-family: "Arimo", sans-serif;
   }
   
-  /* Innholdet sentrert og med maks bredde */
   .stay-updated-inner {
     max-width: 500px;
     margin-left: 75px;
-    padding-right: 25px; /* Luft på små skjermer */
+    padding-right: 25px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     text-align: left;
   }
   
-  /* Tekst */
   .stay-updated h5 {
     font-size: 36px;
     margin-bottom: 10px;

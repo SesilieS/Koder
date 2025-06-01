@@ -7,29 +7,7 @@
     max-width: 100%;
     overflow-x: hidden;
   }
-  
-  .head-line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    background-color: #f7f2de;
-    position: relative;
-  }
-  .cart-counter {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background-color: #008F51;
-    font-weight: normal;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 999px;
-    min-width: 24px;
-    text-align: center;
-    z-index: 99;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  }
+  /*Header*/
   .head-line .hamburger {
     align-self: center;
   }
@@ -45,8 +23,6 @@
     background-color: #333;
     transition: transform 0.3s ease;
   }
-  
-  /* Navigation Container */
   .nav-container {
     width: 33.333%;
     height: 100vh;
@@ -65,9 +41,9 @@
     border-bottom: 1px solid black;
     gap: 1.5rem;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     .nav-container {
-      width: 100%; /* tar mer bredde på mobil */
+      width: 100%; 
     }
   }
   
@@ -77,7 +53,6 @@
     visibility: visible;
     pointer-events: auto;
   }
-  
   
   nav ul {
     list-style: none;
@@ -106,20 +81,20 @@
     text-transform: uppercase;
     letter-spacing: 10px;
   }
-  /* Hamburger Animation */
-.hamburger.active .hamburger-line:nth-child(1) {
+
+  .hamburger.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
-}
+  }
 
-.hamburger.active .hamburger-line:nth-child(2) {
+  .hamburger.active .hamburger-line:nth-child(2) {
   opacity: 0;
-}
+  }
 
-.hamburger.active .hamburger-line:nth-child(3) {
+  .hamburger.active .hamburger-line:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -7px);
-}
+  }
       
-.hamburger {
+  .hamburger {
     display: block;
     background: none;
     border: none;
@@ -128,14 +103,14 @@
     z-index: 100;
   }
   
-.hamburger-line {
+  .hamburger-line {
     display: block;
     width: 25px;
     height: 3px;
     margin: 5px 0;
     background-color: #333;
     transition: transform 0.3s ease;
-  }
+    }
   .close-btn {
     position: absolute;
     top: 10px;
@@ -146,7 +121,32 @@
     cursor: pointer;
     z-index: 1001;
   }
+  
+.head-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #f7f2de;
+    position: relative;
+  }
 
+  .cart-counter {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #008F51;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    min-width: 24px;
+    text-align: center;
+    z-index: 99;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+/*Logo*/
   h1 {
     text-align: center;
     margin: 20px auto;
@@ -160,7 +160,7 @@
     background-size: cover;
     border-top: 2px solid black;
     padding: 0;
-    min-height: 100vh; /* fyll hele skjermen */
+    min-height: 100vh; 
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -178,8 +178,8 @@
     text-transform: uppercase;
     color: #f7f2de;
     text-align: center;
-    padding: 0 20px; /* Padding for text to avoid clipping */
-    z-index: 1; /* Ensure text is above the background */
+    padding: 0 20px;
+    z-index: 1;
     transition: transform 0.3s ease;
 
   }
@@ -187,12 +187,12 @@
   .mainsite h2::after {
     content: "";
     position: absolute;
-    top: 110%; /* Position below h2 */
+    top: 110%; 
     left: 50%;
     transform: translateX(-50%);
-    width: 2px; /* Thin vertical line */
-    height: 100px; /* Adjust height as needed */
-    background-color: white; /* White line */
+    width: 2px; 
+    height: 100px; 
+    background-color: white; 
   }
 
   .mainsite h2 {
@@ -205,7 +205,31 @@
     bottom: 30%;
     transform: translateX(-50%) translateY(20px);
   }
+  @media (max-width: 1200px) {
+    .mainsite {
+      padding-bottom: 60px;
+      min-height: 100vh;
+    }
+    
+    .mainsite h2 {
+      font-size: 80px; 
+      top: 5%;
+      transform: translateX(-50%) translateY(-10px);
+    }
+    
+    .mainsite h2::after {
+      height: 400px;
+    }
+    
+    .mainsite h3 {
+      bottom: 20%;
+      font-size: 20px;
+      transform: translateX(-50%) translateY(10px);
+    }
+    
+    }
 
+/*Shop and about*/
 .shop, .about {
   font-family: "Arimo", sans-serif;
   display: inline-flex;
@@ -214,10 +238,10 @@
   justify-content: center;
   width: 49%;
   margin: auto;
-  flex: 1; /* Allow them to share space equally */
+  flex: 1; 
   text-align: center;
   margin-bottom: 40px;
-  position: relative; /* Required for the line positioning */
+  position: relative; 
   padding-bottom: 10px;
   padding-top: 50px;
 }
@@ -227,20 +251,19 @@
   font-size: 16px;
 }
 
-
 .shop::after {
   content: "";
   position: absolute;
-  top: 0%; /* Extend the line above the section */
-  right: -1px; /* Position the line between the two sections */
-  width: 2px; /* Thin vertical line */
-  height: 105.5%; /* Extend the line below the section */
+  top: 0%;
+  right: -1px; 
+  width: 2px; 
+  height: 105.5%; 
   background-color: black;
 }
 .responsive-img {
   width: 100%;
-  max-width: 400px; /* eller 100% om du vil de skal fylle artikkelen */
-  height: 300px; /* fast høyde gir lik størrelse uansett bildetype */
+  max-width: 400px; 
+  height: 300px; 
   object-fit: cover;
   border-radius: 20px;
   margin-top: 40px;
@@ -258,34 +281,49 @@
 }
 
 .shop a, .about a {
-    display: block;                  /* slik at width og margin fungerer */
+    display: block;                  
     color: white;
     width: 300px;
     margin: 50px auto;
     border-radius: 10px;
     border: 10px solid #dc4131;
-    padding: 5px;                   /* fikset: 'auto' fungerer ikke her */
+    padding: 5px;                  
     background-color: #dc4131;
     text-decoration: none;
     font-size: 20px;
-    text-align: center;             /* for å sentrere teksten */
-    box-sizing: border-box;        /* slik at padding ikke bryter bredde */
+    text-align: center;             
+    box-sizing: border-box;       
 }
 
 .shop a:hover, .about a:hover {
   background-color: #ae2e21;
   border-color: #ae2e21;
 }
+@media (max-width: 1200px) {
+  .shop, .about {
+    width: 100%;
+    display: block;
+    margin: 0 20px 0;
+    padding: 20px;
+    border-bottom: black solid 1px;
+  }
 
+  .shop::after {
+    display: none;
+    
+  }
+}
+
+/* How it works */
 .how-it-works-wrapper {
     display: grid;
     background-color: #f7f2de;
-    grid-template-columns: 1fr 3fr; /* juster for å styre forholdet */
+    grid-template-columns: 1fr 3fr; 
     gap: 40px;
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: 0 40px; /* juster eller fjern for full bredde */
+    padding: 0 40px; 
     box-sizing: border-box;
     font-family: "Arimo", sans-serif;
     align-items: start;
@@ -297,28 +335,26 @@
     box-sizing: border-box;
     }
     
-    /* Gjør venstre kolonne like høy som høyre */
 .how-header {
   border-right: 1px solid black;
   padding: 40px;
   display: flex;
-  align-items: center; /* senterer teksten vertikalt (kan fjernes) */
+  align-items: center; 
   min-height: 100%;
   text-align: center;
   text-transform: uppercase;
   position: relative;
 }
     
-    /* Høyre kolonne */
-    .how-it-works {
+  .how-it-works {
       padding: 40px;
       display: flex;
       flex-direction: column;
     }
     
-    .how-it-works > div {
+  .how-it-works > div {
       display: grid;
-      grid-template-columns: 1fr 3fr; /* overskrift til venstre, tekst til høyre */
+      grid-template-columns: 1fr 3fr; 
       gap: 20px;
       margin-bottom: 30px;
       padding-bottom: 30px;
@@ -327,7 +363,7 @@
       position: relative;
     }
     
-    .how-it-works h4 {
+  .how-it-works h4 {
       margin: 0;
       font-size: 18px;
       text-transform: uppercase;
@@ -336,7 +372,7 @@
       display: flex;;
     }
     
-    .how-it-works p {
+  .how-it-works p {
       margin: 0;
       font-size: 16px;
       line-height: 1.4;
@@ -356,18 +392,14 @@
   font-family: "Arimo", sans-serif;
 }
 
-/* Legg til høyre linje på venstre kolonne */
 .how-header {
   padding: 40px;
   border-right: 1px solid black;
 }
 
-/* Padding til høyre kolonne */
 .how-it-works {
   padding: 40px;
 }
-
-/* Linje mellom stegene */
 .how-it-works > div {
   margin-bottom: 30px;
   padding-bottom: 30px;
@@ -380,25 +412,7 @@
   border-bottom: none;
 }
 
-/* Responsiv mobilstil */
 @media (max-width: 1200px) {
-
-  /* Stabler .shop og .about under hverandre */
-  .shop, .about {
-    width: 100%;
-    display: block;
-    margin: 0 20px 0;
-    padding: 20px;
-    border-bottom: black solid 1px;
-  }
-
-  /* Fjern linjen mellom shop og about på mobil */
-  .shop::after {
-    display: none;
-    
-  }
-
-  /* Tilpass .how-it-works-wrapper til én kolonne */
   .how-it-works-wrapper {
     grid-template-columns: 1fr;
   }
@@ -413,7 +427,7 @@
     padding: 20px;
   }
 
-  /* Tilpass hvert steg i "how it works" */
+
   .how-it-works > div {
     grid-template-columns: 1fr;
     width: 100%;
@@ -433,31 +447,10 @@
     width: 90%;
     font-size: 18px;
   }
-/* Responsiv justering av .mainsite */
-.mainsite {
-  padding-bottom: 60px;
-  min-height: 100vh;
-}
-
-.mainsite h2 {
-  font-size: 80px; /* mindre enn desktop */
-  top: 5%;
-  transform: translateX(-50%) translateY(-10px);
-}
-
-.mainsite h2::after {
-  height: 400px; /* kortere linje under */
-}
-
-.mainsite h3 {
-  bottom: 20%;
-  font-size: 20px;
-  transform: translateX(-50%) translateY(10px);
-}
 
 }
 
-/* Populære produkter */
+/*Popular products */
 .popular h5 {
   text-align: left;
   font-size: 24px;
@@ -487,7 +480,7 @@
   object-fit: cover;
   border-radius: 15px;
 }
-/* Sort knapp nederst til høyre på bildet */
+
 .add-to-basket {
   position: absolute;
   bottom: 20px;
@@ -510,7 +503,7 @@
 .popular-items > .item {
   width: 400px;
   text-align: left;
-  flex-shrink: 0; /* Important for horizontal scroll */
+  flex-shrink: 0; 
 }
 
 .popular-items img {
@@ -533,7 +526,6 @@
   padding-bottom: 30px;
 }
 
-/* Responsive: horisontal scrolling på mobil */
 @media (max-width: 1300px) {
   .popular-items {
     flex-wrap: nowrap;
@@ -550,7 +542,8 @@
     background: #ccc;
     border-radius: 4px;
   }
-/*Footer*/
+
+  /*Footer*/
 .stay-updated {
   background-color: red;
   padding: 40px 0;
@@ -558,18 +551,16 @@
   font-family: "Arimo", sans-serif;
 }
 
-/* Innholdet sentrert og med maks bredde */
 .stay-updated-inner {
   max-width: 500px;
   margin-left: 75px;
-  padding-right: 25px; /* Luft på små skjermer */
+  padding-right: 25px; 
   display: flex;
   flex-direction: column;
   gap: 20px;
   text-align: left;
 }
 
-/* Tekst */
 .stay-updated h5 {
   font-size: 36px;
   margin-bottom: 10px;
@@ -620,7 +611,4 @@
 
 .stay-updated button:hover {
   background-color: #f0f0f0;
-}
-
-
 }
