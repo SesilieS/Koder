@@ -15,6 +15,15 @@ I was asked to make a website for "FRAM". They focus on selling vegetables from 
 - Interactive elements powered by JavaScript.  
 - Clean and organized code structure.   
 
+## How to navigate
+- The Front page has the names index.html, style.css and script.js
+- The Products page has the names produce.html/css/js
+- and the Chatbot page has the names chatbot.html/css/js
+All the pictures can be found in the Images-folder. 
+Start with opening the Front page and navigate to the Products and the Chatbot via the menu on the left side on the page. When you want to go back to the Front page you can always click on the name "FRAM" on the top of the page.
+
+Enjoy!
+
 ## Author  
 Sesilie Solskog 
 
