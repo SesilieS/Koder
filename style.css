@@ -156,7 +156,7 @@
   }
   
   .mainsite {
-    background-image: url('mainsite.jpg');
+    background-image: url('Images/mainsite.jpg');
     background-size: cover;
     border-top: 2px solid black;
     padding: 0;

@@ -167,7 +167,7 @@
 /*Chatbot*/
   .mainsite {
     height: calc(99vh - 80px); 
-    background-image: url("mainsite.jpg"); 
+    background-image: url("Images/mainsite.jpg"); 
     background-size: cover;               
     background-position: center;          
     background-repeat: no-repeat;        
