@@ -20,7 +20,9 @@ I was asked to make a website for "FRAM". They focus on selling vegetables from 
 - The Products page has the names produce.html/css/js
 - and the Chatbot page has the names chatbot.html/css/js
 All the pictures can be found in the Images-folder. 
-Start with opening the Front page and navigate to the Products and the Chatbot via the menu on the left side on the page. When you want to go back to the Front page you can always click on the name "FRAM" on the top of the page.
+Start with using your very own API key and place it in the Chatbot.js. Replace "YOUR AI KEY HERE". Then you are ready to explore "FRAM", starting with the Front page and navigate to the Products and the Chatbot via the menu on the left side on the page. When you want to go back to the Front page you can always click on the name "FRAM" on the top of the page.
+
+Please read my Reflective Journal to see how I managed to solve my biggest problems and where i seeked help during this project. Much of the time I have just tried and failed, but the bigger problems have I described in my Journal. 
 
 Enjoy!
 
